@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-background-light dark:bg-background-dark text-dark dark:text-light transition-colors duration-200;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-semibold;
+  }
+  
+  h1 {
+    @apply text-3xl md:text-4xl leading-tight;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl leading-tight;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl leading-tight;
+  }
+  
+  p, span, div {
+    @apply font-inter;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .btn {
+    @apply px-4 py-2 rounded transition-all duration-200 font-medium inline-flex items-center justify-center;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary/90;
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-white hover:bg-accent/90;
+  }
+  
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary hover:text-white;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-dark rounded shadow-md overflow-hidden transition-all duration-200;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200;
+  }
+}
